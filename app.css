@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+/* Follow my Github : https://github.io/ferihidayat */
+/*  STYLING SCROLLBAR -> */
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #a5aaad;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: #726c79;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a5aaad;
+}
+
+:root {
+  --fh-color-primary: #3ea175;
+  --fh-font-sans-serif: "Lato", sans-serif;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: var(--fh-font-sans-serif);
+}
+
+
+
+.container-auth {
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 10%;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 0.8fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas:
+    "sidebar nav nav nav"
+    "sidebar main main main";
+  /* grid-gap: 0.2rem; */
+}
+
+.navbar {
+  background: #ffffff;
+  grid-area: nav;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+  border-bottom: 1px solid lightgray;
+}
+
+.nav-icon {
+  display: none;
+}
+
+.nav-icon>i:hover {
+  background-color: #8a88882c;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-icon>i {
+  cursor: pointer;
+  font-size: 26px;
+  color: #a5aaad;
+  background-color: #9b969612;
+  padding: 2px 4px 2px 4px;
+  border-radius: 40px;
+}
+
+.navbar-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-right>a {
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.navbar-right>a>i {
+  color: #a5aaad;
+  font-size: 16px;
+  border-radius: 50px;
+  background: #ffffff;
+  box-shadow: 2px 2px 5px #d9d9d9, -2px -2px 5px #ffffff;
+  padding: 7px;
+}
+
+main {
+  background: #f3f4f6;
+  grid-area: main;
+  overflow-y: auto;
+}
+
+.main-container {
+  padding: 20px 35px;
+}
+
+.main-title {
+  display: flex;
+  align-items: center;
+}
+
+.main-title>img {
+  max-height: 100px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+.main-greeting>h1 {
+  font-size: 24px;
+  color: #2e4a66;
+  margin-bottom: 5px;
+}
+
+.main-greeting>p {
+  font-size: 14px;
+  font-weight: 700;
+  color: #a5aaad;
+}
+
+.card {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #eef2f7;
+  border-radius: 0.25rem;
+
+}
+
+.card-right {
+  padding: 25px;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-title>div>h1 {
+  font-size: 24px;
+  color: #2e4a66;
+  margin-bottom: 5px;
+}
+
+.card-title>div>p {
+  font-size: 14px;
+  font-weight: 700;
+  color: #a5aaad;
+}
+
+.card-title>i {
+  color: #ffffff;
+  font-size: 20px;
+  background: #39447a;
+  border-radius: 200px 0px 200px 200px;
+  -moz-border-radius: 200px 0px 200px 200px;
+  -webkit-border-radius: 200px 0px 200px 200px;
+  border: 0px solid #000000;
+  padding: 15px;
+}
+
+/*  SIDEBAR STARTS HERE  */
+
+#sidebar {
+  height: 100%;
+  background: #020509;
+  grid-area: sidebar;
+  overflow-y: auto;
+  padding: 30px 20px 30px 20px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  box-shadow: 0px 1px 3px 1px rgb(118, 118, 118);
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f3f4f6;
+  margin-bottom: 30px;
+  /* color: #E85B6B; */
+}
+
+.sidebar-img {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-title>div>img {
+  width: 75px;
+  object-fit: contain;
+}
+
+.sidebar-title>div>h1 {
+  font-size: 18px;
+  display: inline;
+}
+
+.sidebar-title>i {
+  font-size: 18px;
+  display: none;
+  padding-left: 20px;
+}
+
+.sidebar-menu>h2 {
+  color: var(--fh-color-primary);
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  padding: 0 10px;
+  font-weight: 700;
+}
+
+.sidebar-link {
+  color: #f3f4f6;
+  padding: 10px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.sidebar-link:hover {
+  background: rgba(62, 161, 117, 0.3);
+  color: var(--fh-color-primary);
+}
+
+.link-active {
+  background: rgba(62, 161, 117, 0.3);
+  color: var(--fh-color-primary);
+}
+
+.link-active a {
+  color: var(--fh-color-primary) !important;
+}
+
+.sidebar-link>a {
+  text-decoration: none;
+  color: #828688;
+  font-weight: 400;
+}
+
+.sidebar-link>i {
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.sidebar-responsive {
+  display: inline !important;
+  z-index: 9999 !important;
+  left: 0 !important;
+  position: absolute;
+}
+
+@media only screen and (max-width: 978px) {
+  .container {
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 0.2fr 2.2fr; */
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      "nav"
+      "main";
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  .sidebar-title>i {
+    display: inline;
+  }
+
+  .nav-icon {
+    display: inline;
+  }
+}
+
+@media only screen and (max-width: 855px) {
+  .main-card {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 480px) {}
+
+.blur {
+  filter: blur(20px);
+}
+
+a.username {
+  font-size: small;
+  font-weight: 400;
+  color: #767676d5;
+}
+
+/* _------------------------Login-------------------- */
+.auth {
+  background-image: url(/assets/bg-pattern-light.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+.mb {
+  margin-bottom: 20px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+input.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.45rem;
+  font-size: .9rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6c757d;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #dee2e6;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  outline: none;
+
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #adb5bd;
+  font-family: 'Lato', sans-serif;
+  opacity: 1
+}
+
+.card-title-auth {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.45rem 0.9rem;
+  font-size: .9rem;
+  border-radius: 0.15rem;
+  color: #fff;
+  background-color: #727cf5;
+  border-color: #727cf5;
+}
+
+/* ------ Pendek Ikih --------- */
